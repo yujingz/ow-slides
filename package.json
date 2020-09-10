@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "mdx-deck deck.mdx",
+    "build": "rm -rf public && mdx-deck build deck.mdx"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "mdx-deck": "^3.0.0",
+    "prism-react-renderer": "^1.0.2",
+    "react-particles-js": "^3.0.0",
+    "react-wordcloud": "^1.1.1"
+  }
+}
