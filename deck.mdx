@@ -171,8 +171,8 @@ $ sudo docker
 ```bash
 python3 simulation/tools/sims.py \
  --sim_config_path data/simulation/sim_configs/world_sim.pb.txt \
- -W data/simulation/scenarios/jinan_trigger_car_following.pb.txt \
- -o /tmp/results/
+ -o /tmp/out --no_ui --no_build \
+ -W data/simulation/scenarios/jinan_trigger_car_following.pb.txt
 ```
 
 - Launch OW server
@@ -194,7 +194,7 @@ export ROS_DOMAIN_ID=123
 python3 ./simulation/tools/sims.py \
   --sim_config_path data/simulation/sim_configs/records_replay.pb.txt \
   -o /tmp/out --no_build --no_ui --override_output_dir --platform p1 \
-  -L /home/yujing/data/2020/08/20/7166c2b1-db42-4495-a9bd-17f9e6a3f7cb/ 
+  -L /home/yujing/data/2020/08/20/7166c2b1-db42-4495-a9bd-17f9e6a3f7cb/
 ```
 
 - Launch OW server
@@ -224,9 +224,7 @@ export ROS_DOMAIN_ID=123
 ```bash
 REC_DIR=/home/yujing/data/2020/07/15/fd874b50-4c1b-4032-a12a-fb113295fc6c/
 
-sudo chariot ow ${REC_DIR} \
-  --map jinan \
-  --with-lidar
+sudo chariot ow --map jinan --with-lidar ${REC_DIR}
 ```
 
 ---
@@ -235,16 +233,28 @@ sudo chariot ow ${REC_DIR} \
   <span style="line-height: 1em;">Support</span>
 </SlideHeadline>
 
-- Chariot:
-  - yuanhai.he@inceptioglobal.ai
-  - jiahao.cai@inceptio.ai
-  - xiaoling.li@inceptio.ai
-- OW Client:
-  - yujing@inceptioglobal.ai
-  - qi.he@inceptio.ai
-- OW Live Server & Simulator:
-  - victor.wang@inceptio.ai
-  - jun.yang@inceptio.ai
+<div style={{ display: "flex", width: "100%" }}>
+  <div style={{ width: "50%" }}>
+    <h4>US Timezone</h4>
+    <ul>
+      <li> Wilson </li>
+      <li> Yujing </li>
+      <li> Hongjie </li>
+    </ul>
+  </div>
+  <div style={{ width: "50%" }}>
+    <h4>CN Timezone</h4>
+    <ul>
+      <li> Qi He </li>
+      <li> Jun Yang </li>
+      <li> Victor Wang </li>
+      <li> Yuanhai </li>
+    </ul>
+  </div>
+</div>
+
+<br />
+
 - WeChat Work Group: Overwatch Support
 - https://ow-docs.inceptio.cn
 - https://confluence.inceptio.tech/display/SIM/Simulation

@@ -5,9 +5,14 @@ import useColors from "../lib/useColors";
 
 export default () => {
   function getCurrentTime() {
-    return (window.performance.now() + window.performance.timeOrigin).toFixed(
-      3
-    );
+    const isBrowser = typeof window !== `undefined`;
+    if (isBrowser) {
+      return (window.performance.now() + window.performance.timeOrigin).toFixed(
+        3
+      );
+    } else {
+      return "";
+    }
   }
   const [currentTime, setCurrentTime] = useState(getCurrentTime());
 
